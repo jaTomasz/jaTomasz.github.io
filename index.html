@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>SHOW ME WHAT YOU GOT</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+  
+
+  
+<section class="move-area">
+  <div id="container">
+    <div id="head_img">
+      <div class='eye'></div>
+	  <div id="przerwa"></div>
+      <div class='eye'></div>
+	</div>
+  </div>
+</section>
+
+<script>
+$(".move-area").mousemove(function(event) {
+  var eye = $(".eye");
+  var x = (eye.offset().left) + (eye.width() / 2);
+  var y = (eye.offset().top) + (eye.height() / 2);
+  var rad = Math.atan2(event.pageX - x, event.pageY - y);
+  var rot = ((rad * (180 / Math.PI) - 230) * -1);
+  eye.css({
+    '-webkit-transform': 'rotate(' + rot + 'deg)',
+    '-moz-transform': 'rotate(' + rot + 'deg)',
+    '-ms-transform': 'rotate(' + rot + 'deg)',
+    'transform': 'rotate(' + rot + 'deg)'
+  });
+});
+</script>
+
+</body>
+</html>

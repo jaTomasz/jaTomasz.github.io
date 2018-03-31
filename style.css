@@ -1,0 +1,36 @@
+.move-area{/*normally use body*/
+width: 100%;
+  height: 100vh;
+}
+#container {
+  position: absolute;
+  left: 665px;
+  width: 700px;
+  height: 990px;
+}
+#head_img{
+    width: 80%;
+    height: 80%;
+    background-image: url(heads.png);
+	background-size: cover;
+}
+.eye {
+  position: relative;
+  display: inline-block;
+  top: 27%;
+  left: 17%;
+  height: 10%;
+  width: 14%;
+  
+}
+.eye:after { /*pupil*/
+  position: absolute;
+  content: url(pupil.png);
+}
+body {
+background-image: url("back.png");
+}
+#przerwa{
+width: 17%;
+display: inline-block;
+}
