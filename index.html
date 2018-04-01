@@ -5,11 +5,25 @@
   <title>SHOW ME WHAT YOU GOT</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript"> 
+  function undo()
+  {
+  var imag = document.getElementById("head_img");
+  imag.style.backgroundImage = "url('heads.png')";
+  }
+  
+  function changeImage()
+  {
+  var img = document.getElementById("head_img");
+  img.style.backgroundImage = "url('disqualified.png')";
+  var audio = new Audio('disqualified.wav');
+  audio.play();
+  setTimeout(undo, 2000);
+  return false;
+  }
+  </script>
 </head>
 <body>
-  
-
-  
 <section class="move-area">
   <div id="container">
     <div id="head_img">
@@ -18,6 +32,7 @@
       <div class='eye'></div>
 	</div>
   </div>
+    <button id="disq" type=button onclick="changeImage();"/>
 </section>
 
 <script>
@@ -35,6 +50,5 @@ $(".move-area").mousemove(function(event) {
   });
 });
 </script>
-
 </body>
 </html>

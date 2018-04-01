@@ -11,7 +11,7 @@ width: 100%;
 #head_img{
     width: 80%;
     height: 80%;
-    background-image: url(heads.png);
+	background:url("heads.png");
 	background-size: cover;
 }
 .eye {
@@ -33,4 +33,10 @@ background-image: url("back.png");
 #przerwa{
 width: 17%;
 display: inline-block;
+}
+#disq{
+height: 154px;
+width: 375px;
+background: url("disc.png");
+background-size: cover;
 }
