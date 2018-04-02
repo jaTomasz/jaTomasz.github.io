@@ -37,6 +37,6 @@ display: inline-block;
 #disq{
 height: 154px;
 width: 375px;
-background: url("disc.png");
+background: url("disc.PNG");
 background-size: cover;
 }
